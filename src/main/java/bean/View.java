@@ -33,4 +33,15 @@ public class View {
         return model;
     }
 
+    /**
+     *
+     * @param key
+     * @param value
+     * @return
+     */
+    public View addModel(String key, Object value) {
+
+        return this;
+    }
+
 }
