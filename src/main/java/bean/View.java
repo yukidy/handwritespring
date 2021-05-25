@@ -40,7 +40,7 @@ public class View {
      * @return
      */
     public View addModel(String key, Object value) {
-
+        model.put(key, value);
         return this;
     }
 
