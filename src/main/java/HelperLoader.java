@@ -1,8 +1,4 @@
-import annotation.Controller;
-import helper.BeanHelper;
-import helper.ClassHelper;
-import helper.ControllerHelper;
-import helper.IocHelper;
+import helper.*;
 import utils.ClassUtil;
 
 /**
@@ -20,6 +16,7 @@ public class HelperLoader {
         Class<?> [] classArray = {
                 ClassHelper.class,
                 BeanHelper.class,
+                AopHelper.class,
                 ControllerHelper.class,
                 IocHelper.class
         };

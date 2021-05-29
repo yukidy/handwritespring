@@ -24,9 +24,13 @@ public class ProxyFactory {
      */
     public static <T> T createProxy(final Class<?> targetClass, final List<Proxy> proxyList){
         return (T) Enhancer.create(targetClass, new MethodInterceptor() {
+            /**
+             * 代理方法
+             *      每次调用目标方法时会先创建一个ProxyChain对象
+             */
             @Override
-            public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-                return null;
+            public Object intercept(Object targetObject, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
+                return new ProxyChain(targetClass, targetObject, method, methodProxy, objects, proxyList).doChainProxy();
             }
         });
     }
