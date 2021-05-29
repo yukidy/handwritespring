@@ -217,7 +217,7 @@ public final class DatabaseHelper {
 
 
     /**
-     *
+     * 更新实体对象
      * @param entityClass
      * @param id
      * @param fieldMap
